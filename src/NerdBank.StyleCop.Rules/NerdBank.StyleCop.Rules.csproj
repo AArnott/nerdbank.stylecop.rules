@@ -89,4 +89,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\tools\NerdBank.StyleCop.Rules.Versioning.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cmd /c copy "$(TargetPath)" "$(ProgramFiles)\Microsoft StyleCop 4.3\Custom Rules"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
