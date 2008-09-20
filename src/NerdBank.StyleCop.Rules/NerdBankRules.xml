@@ -1,0 +1,19 @@
+﻿<SourceAnalyzer Name="NerdBank Rules">
+	<Description>
+		NerdBank StyleCop rules
+	</Description>
+	<Rules>
+		<Rule Name="NoTrailingWhiteSpace" CheckId="NB1000">
+			<Context>No line should end with whitespace.</Context>
+			<Description>Validates that source code lines always trim trailing whitespace.</Description>
+		</Rule>
+		<Rule Name="IndentUsingTabs" CheckId="NB1001">
+			<Context>Indentation should be done with tabs - not spaces.</Context>
+			<Description>Validates that source code lines are indented using tabs.</Description>
+		</Rule>
+		<Rule Name="NoSpacesBeforeTabs" CheckId="NB1002">
+			<Context>No spaces can immediately precede a tab.</Context>
+			<Description>Validates that whitespace never uses a tab after a space.</Description>
+		</Rule>
+	</Rules>
+</SourceAnalyzer>
