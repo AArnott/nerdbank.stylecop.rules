@@ -1,4 +1,4 @@
 param ($libraryName = { throw "-libraryName required" } )
 
-dir -rec . *YOURLIBNAME* |% { ren $_.FullName $_.Name.Replace("YOURLIBNAME", $libraryName) -whatif }
+dir -rec . *NerdBank.StyleCop.Rules* |% { ren $_.FullName $_.Name.Replace("NerdBank.StyleCop.Rules", $libraryName) -whatif }
 

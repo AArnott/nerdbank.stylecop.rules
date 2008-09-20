@@ -3,7 +3,7 @@
   <Description>This is a default test run configuration for a local test run.</Description>
   <CodeCoverage enabled="true">
     <Regular>
-      <CodeCoverageItem binaryFile="C:\git\productname\bin\Debug\YOURLIBNAME.dll" pdbFile="C:\git\productname\bin\Debug\ProductName.pdb" instrumentInPlace="true" />
+      <CodeCoverageItem binaryFile="C:\git\productname\bin\Debug\NerdBank.StyleCop.Rules.dll" pdbFile="C:\git\productname\bin\Debug\ProductName.pdb" instrumentInPlace="true" />
     </Regular>
   </CodeCoverage>
   <TestTypeSpecific>

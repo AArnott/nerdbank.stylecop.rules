@@ -26,12 +26,12 @@ function Checkout($Version) {
 }
 
 function Build() {
-	msbuild.exe "$RootDir\src\YOURLIBNAME\YOURLIBNAME.csproj" /p:Configuration=$Configuration
+	msbuild.exe "$RootDir\src\NerdBank.StyleCop.Rules\NerdBank.StyleCop.Rules.csproj" /p:Configuration=$Configuration
 }
 
 function Generate-Metadata($Version) {
 	Push-Location $LibCheckTmpDir
-	& ".\libcheck.exe" -store "YOURLIBNAME.dll" $Version -full "$BinDir\$Configuration"
+	& ".\libcheck.exe" -store "NerdBank.StyleCop.Rules.dll" $Version -full "$BinDir\$Configuration"
 	Pop-Location
 }
 
@@ -43,7 +43,7 @@ function Compare-Metadata() {
 
 function ShadowCopy-Libcheck() {
 	# This function copies LibCheck from the checked out version to a temp
-	# directory so that as we git checkout other versions of YOURLIBNAME,
+	# directory so that as we git checkout other versions of NerdBank.StyleCop.Rules,
 	# we can be sure of running one consistent version of LibCheck.
 	Remove-Item -Recurse $LibCheckTmpDir
 	Copy-Item -Recurse "$ToolsDir\LibCheck" (Split-Path $LibCheckTmpDir)

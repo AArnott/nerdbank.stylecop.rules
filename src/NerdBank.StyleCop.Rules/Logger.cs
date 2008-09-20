@@ -4,14 +4,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace YOURLIBNAME {
+namespace NerdBank.StyleCop.Rules {
 	using System;
 	using System.Globalization;
 	using log4net.Core;
-	using YOURLIBNAME.Loggers;
+	using NerdBank.StyleCop.Rules.Loggers;
 
 	/// <summary>
-	/// A general logger for the entire YOURLIBNAME library.
+	/// A general logger for the entire NerdBank.StyleCop.Rules library.
 	/// </summary>
 	/// <remarks>
 	/// Because this logger is intended for use with non-localized strings, the
@@ -23,7 +23,7 @@ namespace YOURLIBNAME {
 		/// The <see cref="ILog"/> instance that is to be used 
 		/// by this static Logger for the duration of the appdomain.
 		/// </summary>
-		private static ILog facade = Create("YOURLIBNAME");
+		private static ILog facade = Create("NerdBank.StyleCop.Rules");
 
 		#region ILog Members
 		//// Although this static class doesn't literally implement the ILog interface, 

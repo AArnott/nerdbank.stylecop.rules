@@ -3,7 +3,7 @@
 //     Copyright (c) Andrew Arnott. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-namespace YOURLIBNAME {
+namespace NerdBank.StyleCop.Rules {
 	using System.Globalization;
 	using System.Reflection;
 

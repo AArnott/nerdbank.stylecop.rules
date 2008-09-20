@@ -3,7 +3,7 @@
 //     Copyright (c) Andrew Arnott. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
-namespace YOURLIBNAME.Test {
+namespace NerdBank.StyleCop.Rules.Test {
 	using System.Reflection;
 	using log4net;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,7 +15,7 @@ namespace YOURLIBNAME.Test {
 		/// <summary>
 		/// The logger that tests should use.
 		/// </summary>
-		internal static readonly ILog Logger = LogManager.GetLogger("YOURLIBNAME.Test");
+		internal static readonly ILog Logger = LogManager.GetLogger("NerdBank.StyleCop.Rules.Test");
 
 		/// <summary>
 		/// Gets or sets the test context which provides
@@ -28,7 +28,7 @@ namespace YOURLIBNAME.Test {
 		/// </summary>
 		[TestInitialize]
 		public virtual void SetUp() {
-			log4net.Config.XmlConfigurator.Configure(Assembly.GetExecutingAssembly().GetManifestResourceStream("YOURLIBNAME.Test.Logging.config"));
+			log4net.Config.XmlConfigurator.Configure(Assembly.GetExecutingAssembly().GetManifestResourceStream("NerdBank.StyleCop.Rules.Test.Logging.config"));
 		}
 
 		/// <summary>
