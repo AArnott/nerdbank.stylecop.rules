@@ -32,6 +32,11 @@ namespace NerdBank.StyleCop.Rules {
 		/// Ensures that code never has a space before a tab.
 		/// </summary>
 		NoSpacesBeforeTabs,
+
+		/// <summary>
+		/// Ensures that code uses spaces to line characters up with the previous line in specific place.
+		/// </summary>
+		UseSpacesForCharacterAlignment,
 	}
 
 	/// <summary>
@@ -64,13 +69,20 @@ namespace NerdBank.StyleCop.Rules {
 					}
 
 					if (token.CsTokenType == CsTokenType.WhiteSpace && startOfLine) {
-						if (token.Text.Contains(" ")) {
 							// Only allow spaces after as many tabs as were on the previous line,
-							// and no more spaces than the length of the previous line minus the tabs.
+							// and no more spaces than the length of the previous line minus the tabs,
+							// and only one more tab than the previous line had (or else they're probably trying 
+							// to do some kind of character alignment with the previous line, which should be
+							// done with spaces.
 							int numberOfIndentingTabsThisLine = token.Text.ToCharArray().TakeWhile(ch => ch == '\t').Count();
 							int numberOfIndentingTabsLastLine = lastLineIndentation.ToCharArray().TakeWhile(ch => ch == '\t').Count();
 
-							if (numberOfIndentingTabsThisLine < numberOfIndentingTabsLastLine) {
+							if (numberOfIndentingTabsThisLine > numberOfIndentingTabsLastLine + 1) {
+								this.AddViolation(csharpDocument.RootElement, token.LineNumber, NerdBankRule.UseSpacesForCharacterAlignment);
+							}
+
+							if (token.Text.Contains(" ")) {
+								if (numberOfIndentingTabsThisLine < numberOfIndentingTabsLastLine) {
 								// This line has fewer tabs indenting it than the previous line did,
 								// so there definitely should not have been any spaces in the indentation.
 								this.AddViolation(csharpDocument.RootElement, token.LineNumber, NerdBankRule.IndentUsingTabs);
