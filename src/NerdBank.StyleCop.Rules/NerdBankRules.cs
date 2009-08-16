@@ -36,7 +36,7 @@ namespace NerdBank.StyleCop.Rules {
 		/// <summary>
 		/// Ensures that code uses spaces to line characters up with the previous line in specific place.
 		/// </summary>
-		UseSpacesForCharacterAlignment,
+		OneTabIndent,
 	}
 
 	/// <summary>
@@ -68,6 +68,14 @@ namespace NerdBank.StyleCop.Rules {
 						}
 					}
 
+					// WIP: Support this: (note the use of tab-space-tab to support proper character alignment and indentation)
+					////	var contacts = from entry in contactsDocument.Root.Elements(XName.Get("entry", "http://www.w3.org/2005/Atom"))
+					////	               select new {
+					////	               	Name = entry.Element(XName.Get("title", "http://www.w3.org/2005/Atom")).Value,
+					////	               	Email = entry.Element(XName.Get("email", "http://schemas.google.com/g/2005")).Attribute("address").Value,
+					////	               };
+
+
 					if (token.CsTokenType == CsTokenType.WhiteSpace && startOfLine) {
 						// Only allow spaces after as many tabs as were on the previous line,
 						// and no more spaces than the length of the previous line minus the tabs,
@@ -78,7 +86,8 @@ namespace NerdBank.StyleCop.Rules {
 						int numberOfIndentingTabsLastLine = lastLineIndentation.ToCharArray().TakeWhile(ch => ch == '\t').Count();
 
 						if (numberOfIndentingTabsThisLine > numberOfIndentingTabsLastLine + 1) {
-							this.AddViolation(csharpDocument.RootElement, token.LineNumber, NerdBankRule.UseSpacesForCharacterAlignment);
+							// Disabling until the above WIP is fixed.
+							////this.AddViolation(csharpDocument.RootElement, token.LineNumber, NerdBankRule.OneTabIndent);
 						}
 
 						if (token.Text.Contains(" ")) {

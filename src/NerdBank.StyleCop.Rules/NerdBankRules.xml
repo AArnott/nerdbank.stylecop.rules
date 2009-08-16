@@ -15,8 +15,8 @@
 			<Context>No spaces can immediately precede a tab.</Context>
 			<Description>Validates that whitespace never uses a tab after a space.</Description>
 		</Rule>
-		<Rule Name="UseSpacesForCharacterAlignment" CheckId="NB1003">
-			<Context>Tabs must not be used to align the start of a code line with some character in the line above it.</Context>
+		<Rule Name="OneTabIndent" CheckId="NB1003">
+			<Context>Too many additional tabs on this line.  Tabs must not be used to align the start of a code line with some character in the line above it.</Context>
 			<Description>Validates that source code lines use tabs exactly as far as the previous line and spaces after that for character alignment.</Description>
 		</Rule>
 	</Rules>
