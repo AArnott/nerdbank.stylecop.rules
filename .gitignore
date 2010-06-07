@@ -4,3 +4,8 @@ TestResults
 TestResult.xml
 drops
 *.VisualState.xml
+src/_ReSharper*
+src/_UpgradeReport_Files
+src/UpgradeLog.XML
+*.user
+*.swp
