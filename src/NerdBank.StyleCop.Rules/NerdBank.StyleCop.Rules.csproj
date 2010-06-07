@@ -12,6 +12,8 @@
     <AssemblyName>NerdBank.StyleCop.Rules</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <StyleCop_Path Condition=" '$(StyleCop_Path)' == '' ">..\..\lib</StyleCop_Path>
+    <StyleCopVersion>4.4.0.9</StyleCopVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,11 +51,9 @@
       <HintPath>..\..\lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.StyleCop">
-      <!--<HintPath>..\..\..\..\Program Files\Microsoft StyleCop 4.3\Microsoft.StyleCop.dll</HintPath>-->
       <HintPath Condition=" '$(StyleCop_Path)' != '' ">$(StyleCop_Path)\Microsoft.StyleCop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.StyleCop.CSharp">
-      <!--<HintPath>..\..\..\..\Program Files\Microsoft StyleCop 4.3\Microsoft.StyleCop.CSharp.dll</HintPath>-->
       <HintPath Condition=" '$(StyleCop_Path)' != '' ">$(StyleCop_Path)\Microsoft.StyleCop.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -90,6 +90,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\tools\NerdBank.StyleCop.Rules.Versioning.targets" />
   <PropertyGroup>
-    <PostBuildEvent Condition=" '$(TeamCity_Version)' == '' ">cmd /c copy "$(TargetPath)" "$(ProgramFiles)\Microsoft StyleCop 4.3\Custom Rules"</PostBuildEvent>
+    <PostBuildEvent Condition=" '$(TeamCity_Version)' == '' ">cmd /c copy "$(TargetPath)" "$(ProgramFiles)\Microsoft StyleCop $(StyleCopVersion)\Custom Rules"</PostBuildEvent>
   </PropertyGroup>
 </Project>

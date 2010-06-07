@@ -58,7 +58,7 @@ namespace NerdBank.StyleCop.Rules {
 				int lengthOfLastLine = 0;
 				int lengthOfCurrentLine = 0;
 				CsToken lastNonWhitespaceToken = null;
-				foreach (CsToken token in document.DocumentTokens) {
+				foreach (CsToken token in csharpDocument.Tokens) {
 					bool startOfLine = lastTokenWasEndOfLine || firstToken;
 					lengthOfCurrentLine += token.Text.Length;
 
