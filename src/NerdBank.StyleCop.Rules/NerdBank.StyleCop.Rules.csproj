@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StyleCop_Path Condition=" '$(StyleCop_Path)' == '' ">..\..\lib</StyleCop_Path>
-    <StyleCopVersion>4.4.0.9</StyleCopVersion>
+    <StyleCopVersion>4.4.0.14</StyleCopVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
