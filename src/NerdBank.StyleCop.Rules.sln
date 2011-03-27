@@ -1,15 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{20B5E173-C3C4-49F8-BD25-E69044075B4D}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		NerdBank.StyleCop.Rules.vsmdi = NerdBank.StyleCop.Rules.vsmdi
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdBank.StyleCop.Rules", "NerdBank.StyleCop.Rules\NerdBank.StyleCop.Rules.csproj", "{3191B653-F76D-4C1A-9A5A-347BC3AAAAB7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdBank.StyleCop.Rules.Test", "NerdBank.StyleCop.Rules.Test\NerdBank.StyleCop.Rules.Test.csproj", "{4376ECC9-C346-4A99-B13C-FA93C0FBD2C9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{20B5E173-C3C4-49F8-BD25-E69044075B4D}"
-	ProjectSection(SolutionItems) = preProject
-		NerdBank.StyleCop.Rules.vsmdi = NerdBank.StyleCop.Rules.vsmdi
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
