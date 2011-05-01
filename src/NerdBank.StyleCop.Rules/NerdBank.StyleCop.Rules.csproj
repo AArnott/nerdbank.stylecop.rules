@@ -133,6 +133,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\tools\NerdBank.StyleCop.Rules.Versioning.targets" />
   <PropertyGroup>
-    <PostBuildEvent Condition=" '$(TeamCity_Version)' == '' ">cmd /c copy "$(TargetPath)" "$(ProgramFiles)\Microsoft StyleCop $(StyleCopVersion)\Custom Rules"</PostBuildEvent>
+    <PostBuildEvent Condition=" '$(ApplyToMachine)' == 'true' and '$(TeamCity_Version)' == '' ">cmd /c copy "$(TargetPath)" "$(ProgramFiles)\Microsoft StyleCop $(StyleCopVersion)\Custom Rules"</PostBuildEvent>
   </PropertyGroup>
 </Project>
