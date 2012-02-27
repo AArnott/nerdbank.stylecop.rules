@@ -11,8 +11,8 @@ namespace NerdBank.StyleCop.Rules {
 	using System.Text;
 	using System.Text.RegularExpressions;
 
-	using Microsoft.StyleCop;
-	using Microsoft.StyleCop.CSharp;
+	using global::StyleCop;
+	using global::StyleCop.CSharp;
 
 	/// <summary>
 	/// The several rules that can be enabled/disabled individually.

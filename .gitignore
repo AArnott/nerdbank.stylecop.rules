@@ -1,3 +1,5 @@
+*.log
+*.vs10x
 bin
 obj
 TestResults
